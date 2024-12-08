@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         Button {
             guard !buttonTapped else { return }
-            withAnimation(.bouncy) {
+            withAnimation(.interpolatingSpring(stiffness: 170, damping: 15)) {
                 buttonTapped = true
             } completion: {
                 buttonTapped = false
